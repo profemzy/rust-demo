@@ -1,22 +1,42 @@
 fn main() {
-    println!("Hello, world!");
-    demo_integers();
+   demo_if();
+    match_something()
 }
 
-fn demo_integers() {
-    // Signed integer types i8, i16, i32, i64, i128
-    let a1: i32 = -12345;
-    let a2: i32 = 0xFFF;
-    let a3: i32 = 0o177;
-    let a4: i32 = 0b1110;
+fn demo_if() {
 
-    // Unsigned integer types u8, u16, u32, u64, u128
-    let b: u32 = 12345;
+    let age = 18;
 
-    // Architecture specific integer types isize, usize
-    let c: isize = 24680;
+    let msg = if age >   18 {"You are an OG and can vote"} else if age == 18  { "Welcome new voter, you are allowed to vote" } else { "You cannot vote" };
 
-    println!("\nNumbers are {} {} {} {} {} {}", a1, a2, a3, a4, b, c);
-    println!("Numbers in reverse order are {5} {4} {3} {2} {1} {0}", a1, a2, a3, a4, b, c);
-    println!("isize is {} bytes on my machine", std::mem::size_of::<isize>())
+    println!("{}", msg)
 }
+
+fn match_something() {
+
+    let num =5;
+    let temp = 4;
+
+    let day_of_week = match num {
+        1 => "Sunday",
+        2 => "Monday",
+        3 => "Tuesday",
+        4 => "Wednesday",
+        5 => "Thursday",
+        6 => "Friday",
+        7 => "Saturday",
+        _ => "No Match"
+    };
+
+    println!("Day of the week is: {}", day_of_week);
+
+    let weather_status = match temp {
+        temp if temp > 21 => "it's a hot day",
+        temp if temp == 21 => "it's a warm day",
+        _ => "it's a cold day"
+    };
+
+    println!("{}", weather_status)
+}
+
+
