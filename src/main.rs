@@ -1,14 +1,23 @@
+use crate::passing_mutable_reference::do_it_mutably;
 use crate::passing_reference::do_it_with_ref;
 use crate::passing_values::do_it;
+use crate::returning_reference::return_reference;
+use crate::returning_value::return_value;
 
 mod passing_values;
 mod passing_reference;
+mod passing_mutable_reference;
+mod returning_value;
+mod returning_reference;
 
 fn main() {
    demo_if();
     match_something();
     do_it();
-    do_it_with_ref()
+    do_it_with_ref();
+    do_it_mutably();
+    return_value();
+    return_reference();
 }
 
 fn demo_if() {
