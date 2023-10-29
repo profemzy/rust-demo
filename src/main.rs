@@ -1,6 +1,14 @@
+use crate::passing_reference::do_it_with_ref;
+use crate::passing_values::do_it;
+
+mod passing_values;
+mod passing_reference;
+
 fn main() {
    demo_if();
-    match_something()
+    match_something();
+    do_it();
+    do_it_with_ref()
 }
 
 fn demo_if() {
