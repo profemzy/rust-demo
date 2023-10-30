@@ -1,6 +1,7 @@
 use crate::passing_mutable_reference::do_it_mutably;
 use crate::passing_reference::do_it_with_ref;
 use crate::passing_values::do_it;
+use crate::returning_mutable_references::return_mutable_ref;
 use crate::returning_reference::return_reference;
 use crate::returning_value::return_value;
 
@@ -9,6 +10,7 @@ mod passing_reference;
 mod passing_mutable_reference;
 mod returning_value;
 mod returning_reference;
+mod returning_mutable_references;
 
 fn main() {
    demo_if();
@@ -18,6 +20,7 @@ fn main() {
     do_it_mutably();
     return_value();
     return_reference();
+    return_mutable_ref();
 }
 
 fn demo_if() {
