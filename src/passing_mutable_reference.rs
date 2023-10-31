@@ -1,4 +1,4 @@
-pub fn do_it_mutably() {
+pub fn do_it() {
     println!("\nIn demo_passing_mutable_references::do_it()");
 
     let mut n = 42;

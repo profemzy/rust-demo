@@ -1,10 +1,8 @@
-pub fn return_value(){
+pub fn do_it(){
     let n = f1(); // receives copy
     println!("{}", n);
     let s = f2(); // receives ownership
     println!("{}", s);
-    // let status = f3(45);
-    // println!("{}", status);
 }
 
 fn f1() -> i32 {

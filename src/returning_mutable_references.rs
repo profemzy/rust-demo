@@ -1,4 +1,4 @@
-pub fn return_mutable_ref() {
+pub fn do_it() {
     let mut s = String::from("New");
     let r = some_func(&mut s);
 

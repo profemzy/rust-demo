@@ -1,4 +1,4 @@
-pub fn do_it_with_ref() {
+pub fn do_it() {
     println!("\nIn passing_values::do_it()");
 
     let n = 60;

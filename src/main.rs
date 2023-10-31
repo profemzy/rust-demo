@@ -1,26 +1,21 @@
-use crate::passing_mutable_reference::do_it_mutably;
-use crate::passing_reference::do_it_with_ref;
-use crate::passing_values::do_it;
-use crate::returning_mutable_references::return_mutable_ref;
-use crate::returning_reference::return_reference;
-use crate::returning_value::return_value;
-
 mod passing_values;
 mod passing_reference;
 mod passing_mutable_reference;
 mod returning_value;
 mod returning_reference;
 mod returning_mutable_references;
+mod closure;
 
 fn main() {
-   demo_if();
+    demo_if();
     match_something();
-    do_it();
-    do_it_with_ref();
-    do_it_mutably();
-    return_value();
-    return_reference();
-    return_mutable_ref();
+    passing_values::do_it();
+    passing_reference::do_it();
+    passing_mutable_reference::do_it();
+    returning_value::do_it();
+    returning_reference::do_it();
+    returning_mutable_references::do_it();
+    closure::do_it();
 }
 
 fn demo_if() {
@@ -58,5 +53,3 @@ fn match_something() {
 
     println!("{}", weather_status)
 }
-
-

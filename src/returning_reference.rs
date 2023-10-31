@@ -1,4 +1,4 @@
-pub fn return_reference(){
+pub fn do_it(){
     let s = "New Brunswick";
     let r = get_first_word(&s);
     let status = get_score_message(60);
