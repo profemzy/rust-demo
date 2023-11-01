@@ -6,6 +6,7 @@ pub fn do_it(){
     closure_one_params();
     closure_many_params();
     closure_multiple_statements();
+    closure_infer_type();
 }
 
 fn closure_no_params(){
@@ -29,4 +30,11 @@ fn closure_multiple_statements() {
         Utc::now()
     };
     println!("Timestamp: {}", get_timestamp_after_delay(5).format("%T"));
+}
+
+fn closure_infer_type() {
+    let get_time_stamp = || Utc::now();
+    let reciprocal = |n| if n == 0.0 {0.0} else { 1.0/n };
+    println!("Timestamp: {} ", get_time_stamp());
+    println!("Reciprocal: {}", reciprocal(5.0));
 }

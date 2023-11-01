@@ -5,6 +5,7 @@ mod returning_value;
 mod returning_reference;
 mod returning_mutable_references;
 mod closure;
+mod capture_reference;
 
 fn main() {
     demo_if();
@@ -16,6 +17,7 @@ fn main() {
     returning_reference::do_it();
     returning_mutable_references::do_it();
     closure::do_it();
+    capture_reference::do_it();
 }
 
 fn demo_if() {
